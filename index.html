@@ -90,6 +90,28 @@
         <a href="mailto:trandhungdeptrai260704.com" target="_blank" class="google"><i class="bx bxl-google"></i></a>
       </div>
       
+      <div class="gift-box" onclick="showGiftMessage()">
+        <span class="click-text">Click Here</span>
+        <div class="ribbon"></div>
+    </div>
+    <div class="gift-message" id="giftMessage">
+        <h4>Chúc mừng 20/11!</h4>
+        <p>Chúc các thầy cô giáo luôn tràn đầy sức khỏe, hạnh phúc và thành công trong sự nghiệp trồng người!</p>
+        <button onclick="closeGiftMessage()">Đóng</button>
+    </div>
+    
+    <script>
+      function showGiftMessage() {
+          const giftMessage = document.getElementById('giftMessage');
+          giftMessage.style.display = 'block';
+      }
+  
+      function closeGiftMessage() {
+          const giftMessage = document.getElementById('giftMessage');
+          giftMessage.style.display = 'none';
+      }
+  </script>
+  
 
     </div>
   </header><!-- End Header -->

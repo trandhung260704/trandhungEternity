@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gift Box</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background: linear-gradient(to bottom, #f79d00, #64f38c);
+            font-family: Arial, sans-serif;
+        }
+
+        .gift-box {
+            position: relative;
+            width: 150px;
+            height: 150px;
+            background: #ff477e;
+            border-radius: 12px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .gift-box:hover {
+            transform: scale(1.1);
+        }
+
+        .gift-box::before {
+            content: '';
+            position: absolute;
+            width: 150px;
+            height: 40px;
+            background: #ffc107;
+            top: -20px;
+            left: 0;
+            border-radius: 12px 12px 0 0;
+        }
+
+        .gift-box::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 150px;
+            background: #ffc107;
+            top: 0;
+            left: calc(50% - 10px);
+        }
+
+        .message {
+            display: none;
+            text-align: center;
+            background: #fff;
+            color: #333;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .message h2 {
+            margin: 0 0 10px;
+            font-size: 24px;
+            color: #ff477e;
+        }
+
+        .message p {
+            margin: 0;
+            font-size: 18px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+<div class="gift-box" onclick="showMessage()"></div>
+<div class="message" id="messageBox">
+    <h2>Lời chúc 20/11</h2>
+    <p>Chúc thầy cô một ngày 20/11 thật ý nghĩa, tràn đầy niềm vui và hạnh phúc. 
+       Cảm ơn thầy cô đã luôn tận tâm, truyền cảm hứng cho chúng em trên con đường tri thức!</p>
+</div>
+
+<script>
+    function showMessage() {
+        const messageBox = document.getElementById('messageBox');
+        messageBox.style.display = 'block';
+    }
+</script>
+
+</body>
+</html>
